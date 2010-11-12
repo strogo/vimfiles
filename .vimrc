@@ -1,14 +1,27 @@
+set nocompatible
+filetype off
+autocmd!
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-set nocompatible
-
 set ls=2
-set statusline=[%{&ff}]\ %y
-set statusline+=\ %10(%l/%L-%c)%)
+set statusline=%f
+set statusline+=\ [%{&ff}]\ %y
+set statusline+=\ (%(%l/%L-%c)%)
 set statusline+=\ %{fugitive#statusline()}
 set statusline+=\ %{rvm#statusline()}
 
+"display a warning if fileformat isnt unix
+set statusline+=%#warningmsg#
+set statusline+=%{&ff!='unix'?'['.&ff.']':''}
+set statusline+=%*
+
+"Display a warning if file encoding isnt utf-8
+set statusline+=%#warningmsg#
+set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
+set statusline+=%*
+
+filetype on
 filetype plugin on
 filetype indent on
 syntax on
