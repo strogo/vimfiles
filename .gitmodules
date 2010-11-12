@@ -22,3 +22,6 @@
 [submodule "bundle/liquid"]
 	path = bundle/liquid
 	url = https://github.com/tpope/vim-liquid.git
+[submodule "bundle/rvm"]
+	path = bundle/rvm
+	url = https://github.com/csexton/rvm.vim.git
