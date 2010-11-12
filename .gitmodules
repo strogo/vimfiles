@@ -28,3 +28,6 @@
 [submodule "bundle/jekyll"]
 	path = bundle/jekyll
 	url = https://github.com/csexton/jekyll.vim.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
