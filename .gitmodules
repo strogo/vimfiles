@@ -19,3 +19,6 @@
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = https://github.com/tpope/vim-cucumber.git
+[submodule "bundle/liquid"]
+	path = bundle/liquid
+	url = https://github.com/tpope/vim-liquid.git
