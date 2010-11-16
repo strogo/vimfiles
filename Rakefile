@@ -17,13 +17,13 @@ desc "Symlink Config"
 task :symlink do
   pwd = File.dirname(__FILE__)
 
-  if RUBY_PLATFORM =~ /win32/
+  if RUBY_PLATFORM =~ /(ming|win32)/
     home = ENV["USERPROFILE"]
 
-    system "mklink /d \"#{home}\vimfiles\" \"#{pwdj}\""
-    system "mklink \"#{home}\_vimrc\" \"#{pwd}\vimrc\""
+    sh "mklink /d \"#{home}/vimfiles\" \"#{pwd}\""
+    sh "mklink \"#{home}/_vimrc\" \"#{pwd}/vimrc\""
   else
-    system "ln -s \"#{pwd}\" ~/.vim"
-    system "ln -s \"#{pwd}/vimrc\" ~/.vimrc"
+    sh "ln -s \"#{pwd}\" ~/.vim"
+    sh "ln -s \"#{pwd}/vimrc\" ~/.vimrc"
   end
 end
