@@ -60,10 +60,13 @@ set wrap
 let g:twitvim_enable_python=1
 let twitvim_api_root = "https://twitter.com"
 let g:gist_open_browser_after_post = 1
+
 let g:jekyll_post_suffix = "textile"
 let g:jekyll_post_published = "true"
 let g:jekyll_path = "."
 let g:jekyll_post_created = "epoch"
+let g:jekyll_prompt_tags = "true"
+let g:jekyll_prompt_categories = "true"
 
 if has("gui_mac") || has("gui_macvim")
   set guifont=Consolas:h13
