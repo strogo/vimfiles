@@ -57,6 +57,10 @@ set ai
 set si
 set wrap
 
+set backspace=indent,eol,start
+fixdel
+
+
 let g:twitvim_enable_python=1
 let twitvim_api_root = "https://twitter.com"
 let g:gist_open_browser_after_post = 1
